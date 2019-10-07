@@ -139,9 +139,8 @@ class WebviewManager {
                         case KeyEvent.KEYCODE_BACK:
                             if (webView.canGoBack()) {
                                 webView.goBack();
-                            } else {
-                                FlutterWebviewPlugin.channel.invokeMethod("onBack", null);
-                            }
+                            } 
+                            FlutterWebviewPlugin.channel.invokeMethod("onBack", null);
                             return true;
                     }
                 }
